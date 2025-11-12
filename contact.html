@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | JDM Engineering</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .success-message {
+            display: none;
+            background-color: #e6ffe6;
+            border: 1px solid #5cb85c;
+            color: #2d662d;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .error-message {
+            display: none;
+            background-color: #ffe6e6;
+            border: 1px solid #d9534f;
+            color: #a94442;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>JDM Engineering</h1>
+</header>
+
+<nav>
+    <a href="index.html">Domov</a>
+    <a href="about.html">O nás</a>
+    <a href="services.html">Služby</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="contact.html">Kontakt</a>
+</nav>
+
+<div class="container">
+<h2>Kontaktujte nás</h2>
+<p>Radi vám pripravíme cenovú ponuku alebo poradíme s vaším projektom.</p>
+
+<form id="contactForm" action="https://formspree.io/f/xeovqzqw" method="POST">
+    <input type="hidden" name="_subject" value="Nová správa z webu JDM Engineering">
+    
+    <label>Meno</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Správa</label><br>
+    <textarea name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Odoslať</button>
+</form>
+
+<div class="success-message" id="successMessage">
+    ✅ Ďakujeme! Vaša správa bola úspešne odoslaná.
+</div>
+<div class="error-message" id="errorMessage">
+    ❌ Nastala chyba pri odosielaní formulára. Skúste to prosím znova.
+</div>
+</div>
+
+<footer>
+    © 2025 JDM Engineering – Všetky práva vyhradené
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault(); // zastaví klasické odoslanie
+    const form = e.target;
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+        form.reset();
+        document.getElementById("successMessage").style.display = "block";
+        document.getElementById("errorMessage").style.display = "none";
+    } else {
+        document.getElementById("successMessage").style.display = "none";
+        document.getElementById("errorMessage").style.display = "block";
+    }
+});
+</script>
+
+</body>
+</html>

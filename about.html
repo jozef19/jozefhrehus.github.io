@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nás | JDM Engineering</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>JDM Engineering</h1>
+</header>
+<nav>
+    <a href="index.html">Domov</a>
+    <a href="about.html">O nás</a>
+    <a href="services.html">Služby</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="contact.html">Kontakt</a>
+</nav>
+
+<div class="container">
+    <h2>O JDM Engineering</h2>
+    <p>Za značkou JDM Engineering stojí skúsený konštruktér s dlhoročnými skúsenosťami v oblasti strojárskej konštrukcie.</p>
+    <p>Pracujem v prostredí <strong>Autodesk Inventor</strong>, kde navrhujem a optimalizujem diely aj zložité zostavy.</p>
+    <p>Mojou prioritou je spoľahlivosť, presnosť a technické riešenie prispôsobené požiadavkám zákazníka.</p>
+
+    <h3>Ukážky konštrukčnej práce</h3>
+    <div class="gallery">
+        <img src="images/konstukcia1.jpg" alt="3D model strojnej časti">
+        <img src="images/konstukcia2.jpg" alt="Render zostavy v Autodesk Inventor">
+        <img src="images/konstukcia3.jpg" alt="Technický výkres súčiastky">
+        <img src="images/konstukcia4.jpg" alt="3D model rámu zariadenia">
+    </div>
+</div>
+
+<footer>
+    © 2025 JDM Engineering – Všetky práva vyhradené
+</footer>
+</body>
+</html>

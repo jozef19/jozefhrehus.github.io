@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | JDM Engineering</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>JDM Engineering</h1>
+</header>
+
+<nav>
+    <a href="index.html">Domov</a>
+    <a href="about.html">O nás</a>
+    <a href="services.html">Služby</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="contact.html">Kontakt</a>
+</nav>
+
+<div class="container">
+    <h2>Ukážky práce</h2>
+    <p>Niekoľko vybraných projektov z oblasti 3D modelovania, návrhu konštrukcií a pevnostných analýz.</p>
+
+    <div class="gallery">
+        <img src="images/model1.jpg" alt="3D model súčiastky">
+        <img src="images/model2.jpg" alt="Render rámu zariadenia">
+        <img src="images/model3.jpg" alt="Technický výkres">
+        <img src="images/model4.jpg" alt="Detail zostavy">
+    </div>
+</div>
+
+<footer>
+    © 2025 JDM Engineering – Všetky práva vyhradené
+</footer>
+</body>
+</html>
